@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Biostatistics-Tasks (Ali Ranjbaranghaleh)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Biostatistics-Tasks_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Biostatistics-Tasks_files/libs/quarto-html/quarto.js"></script>
+<script src="Biostatistics-Tasks_files/libs/quarto-html/popper.min.js"></script>
+<script src="Biostatistics-Tasks_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Biostatistics-Tasks_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Biostatistics-Tasks_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Biostatistics-Tasks_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="Biostatistics-Tasks_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="Biostatistics-Tasks_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Biostatistics-Tasks_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Biostatistics-Tasks_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="Biostatistics-Tasks_files/libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Tasks Number</h2>
+   
+  <ul>
+  <li><a href="#task-1" id="toc-task-1" class="nav-link active" data-scroll-target="#task-1">Task 1</a>
+  <ul class="collapse">
+  <li><a href="#question" id="toc-question" class="nav-link" data-scroll-target="#question"><strong>Question:</strong></a></li>
+  <li><a href="#answer" id="toc-answer" class="nav-link" data-scroll-target="#answer"><strong>Answer:</strong></a></li>
+  </ul></li>
+  <li><a href="#task-2" id="toc-task-2" class="nav-link" data-scroll-target="#task-2">Task 2</a>
+  <ul class="collapse">
+  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1"><strong>Question:</strong></a></li>
+  <li><a href="#answer-1" id="toc-answer-1" class="nav-link" data-scroll-target="#answer-1"><strong>Answer:</strong></a></li>
+  </ul></li>
+  <li><a href="#task-3" id="toc-task-3" class="nav-link" data-scroll-target="#task-3">Task 3</a>
+  <ul class="collapse">
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2"><strong>Question:</strong></a></li>
+  <li><a href="#answer-2" id="toc-answer-2" class="nav-link" data-scroll-target="#answer-2"><strong>Answer:</strong></a></li>
+  </ul></li>
+  <li><a href="#task-4" id="toc-task-4" class="nav-link" data-scroll-target="#task-4">Task 4</a>
+  <ul class="collapse">
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3"><strong>Question:</strong></a></li>
+  <li><a href="#answer-3" id="toc-answer-3" class="nav-link" data-scroll-target="#answer-3"><strong>Answer:</strong></a></li>
+  </ul></li>
+  <li><a href="#task-5" id="toc-task-5" class="nav-link" data-scroll-target="#task-5">Task 5</a>
+  <ul class="collapse">
+  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4"><strong>Question:</strong></a></li>
+  <li><a href="#answer-4" id="toc-answer-4" class="nav-link" data-scroll-target="#answer-4"><strong>Answer:</strong></a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Biostatistics-Tasks (Ali Ranjbaranghaleh)</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell">
+
+<style type="text/css">
+body.quarto-light {
+  background-color: #d8e2dc;
+}
+body.quarto-dark {
+  background-color: #354f52;
+}
+i.bi::before {
+    display: table-caption !important;
+    height: 2rem !important;
+    width: 2rem !important;
+    content: "" !important;
+    background-repeat: no-repeat !important;
+    background-size: 2rem 2rem !important;
+    position: sticky !important;
+    top: 1rem !important;
+}
+
+body.quarto-dark.sidebar nav[role=doc-toc] ul>li>a.active, .sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
+ color: #ccff33 !important;
+}
+</style>
+</div>
+<section id="task-1" class="level1">
+<h1>Task 1</h1>
+<p><strong>Task 2 (page 42):</strong></p>
+<section id="question" class="level2">
+<h2 class="anchored" data-anchor-id="question"><strong>Question:</strong></h2>
+<p>Assessing the efficiency of the new milking robot:</p>
+<p>In another scenario, our current knowledge regarding milking duration for a cow indicates that it typically takes about 40 seconds to collect 1 kg of milk from a cow, with a population standard deviation od approximately 5 seconds. A new milking robot has been intriduced on a farm with the aim of speeding up the milking process. Now, we need to determine the sample size required to test the hypothesis that milking efficiency has indeed improved. We want to confirm this when the actual mean time required to collect 1 kg of milk using the new robot is 39 seconds or less. The farmer desires a 90% power of the test and sets the significance level α at 0.05.</p>
+</section>
+<section id="answer" class="level2">
+<h2 class="anchored" data-anchor-id="answer"><strong>Answer:</strong></h2>
+<p>For simplicity, I write the values first:</p>
+<p>mean = 40 (sec)</p>
+<p>sd = 5 (sec)</p>
+<p>Δ = 1 (sec) (we need to check whether it would be 39 sec or less so delta is 1 sec)</p>
+<p>α = 0.05 (5% and it is a one-tailed test)</p>
+<p>β = 0.1 (10%)</p>
+<p>Formula : n = (sd<sup>2</sup>)(Zα+Zβ)<sup>2</sup>/Δ<sup>2</sup></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>((<span class="dv">5</span><span class="sc">^</span><span class="dv">2</span>) <span class="sc">*</span> ((<span class="fu">qnorm</span>(<span class="fl">0.05</span>)<span class="sc">+</span><span class="fu">qnorm</span>(<span class="fl">0.1</span>))<span class="sc">^</span><span class="dv">2</span>)) <span class="sc">/</span> (<span class="dv">1</span><span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 214.0962</code></pre>
+</div>
+</div>
+<p>So in this case we need <strong>214 samples</strong> to conduct the test to be sure that milking efficiency has been improved.</p>
+</section>
+</section>
+<section id="task-2" class="level1">
+<h1>Task 2</h1>
+<p><strong>Task 2 (page 46):</strong></p>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1"><strong>Question:</strong></h2>
+<p>Determine the sample size for a two-sided test to detect a difference in the mean carcass length between two pig breeds of 0.5 cm or more with a desired power of 99.9%. Utilize the data in the file “swine-data.txt” to estimate the variance of the trait (column CarcassL).</p>
+<p>First we should import our data and library “tidyverse” for maniplulation of data frame because we should filter only <strong>2 pig breeds</strong> which we have 3 by default.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Pigs <span class="ot">=</span> <span class="fu">read.table</span>(<span class="st">"http://merlin.up.poznan.pl/~mcszyd/dyda/Experimental-Design/swine-data.txt"</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="answer-1" class="level2">
+<h2 class="anchored" data-anchor-id="answer-1"><strong>Answer:</strong></h2>
+<p>As we create our new data sets called Pigs_2breeds which has only Breeds PL and PLW, we should now since it is going to be two-sided test the qnorm we use this time in the formula should be α/2 so we must use qnorm(0.025). Moreover we are planning for independent samples (+ two-sided test) so we have a multiplication by 2 at the first section of our formula:</p>
+<p>mean = MCL</p>
+<p>sd = SCL</p>
+<p>Δ = 0.5 (cm) (we need to check whether it would be 39 sec or less so delta is 1 sec)</p>
+<p>α = 0.05 (5% and it is a one-tailed test) -&gt; α/2 = 0.025</p>
+<p>β = 0.001 (0.1%)</p>
+<p>Formula : n = 2*(sd<sup>2</sup>)(Zα/2+Zβ)<sup>2</sup>/Δ<sup>2</sup></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Pigs_2breeds <span class="ot">&lt;-</span> Pigs <span class="sc">|&gt;</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Breed <span class="sc">==</span> <span class="st">"PL"</span> <span class="sc">|</span> Breed <span class="sc">==</span> <span class="st">"PLW"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>Pigs_2breeds<span class="sc">$</span>CarcassL <span class="ot">-&gt;</span> CL</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(CL) <span class="ot">-&gt;</span> MCL</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(CL) <span class="ot">-&gt;</span> SCL</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.025</span>)  <span class="ot">-&gt;</span> Z1</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.001</span>) <span class="ot">-&gt;</span> Z2</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> (<span class="dv">2</span><span class="sc">*</span>(SCL<span class="sc">^</span><span class="dv">2</span>) <span class="sc">*</span> ((Z1<span class="sc">+</span>Z2)<span class="sc">^</span><span class="dv">2</span>))<span class="sc">/</span>(<span class="fl">0.5</span>)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 651.8972</code></pre>
+</div>
+</div>
+<p>To conduct the test with the situation asked in the question we need <strong>652 pigs for each breed</strong> (652 for PL breed and 652 for PLW breed).</p>
+</section>
+</section>
+<section id="task-3" class="level1">
+<h1>Task 3</h1>
+<p><strong>Task 4 (page 46):</strong></p>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2"><strong>Question:</strong></h2>
+<p>Utilize the data in the file ‘swine-data.txt’ to test the research hypothesis that the mean back fat thickness at sacrum point I is different from the mean back fat thickness at sacrum point II (columns BFT3 and BFT4, respectively).</p>
+</section>
+<section id="answer-2" class="level2">
+<h2 class="anchored" data-anchor-id="answer-2"><strong>Answer:</strong></h2>
+<p>We have the data frame in name of pigs here and we filter PL each breed and test our hypothesis in each breed. here is our main hypothesis:</p>
+<p>H0 : mean back fat thickness at BFT3 and BFT4 are equal (mean(BFT3)=mean(BFT4))</p>
+<p>H1: mean(BFT3) != mean(BFT4) (are not equal)</p>
+<p>we use t.test to test our hypothesis and since we have measurements of back fat thickness of same individual pig but at different site (T3-T4) at the table we are doing a paired test:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>PLBreed <span class="ot">&lt;-</span> Pigs <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">filter</span>(Breed <span class="sc">==</span> <span class="st">"PL"</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># H0 : Mu 3 = Mu4 </span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># H1 : Mu 3 != Mu4</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>BFT3 <span class="ot">&lt;-</span> PLBreed<span class="sc">$</span>BFT3</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>BFT4 <span class="ot">&lt;-</span> PLBreed<span class="sc">$</span>BFT4</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(BFT3, BFT4, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Paired t-test
+
+data:  BFT3 and BFT4
+t = 33.267, df = 242, p-value &lt; 2.2e-16
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ 0.5869275 0.6608091
+sample estimates:
+mean difference 
+      0.6238683 </code></pre>
+</div>
+</div>
+<p><strong>In PL breed the difference in back fat thickness in T3 and T4 is highly statistically significant, t(242) = 33.267, p &lt; .01.</strong></p>
+<p>(it means we reject H0 and we assume H1 is correct)</p>
+<p>Now we do it for other breeds of pigs:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>PLWBreed <span class="ot">&lt;-</span> Pigs <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">filter</span>(Breed <span class="sc">==</span> <span class="st">"PLW"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># H0 : Mu 3 = Mu4 </span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># H1 : Mu 3 != Mu4</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>BFT3_PLW <span class="ot">&lt;-</span> PLWBreed<span class="sc">$</span>BFT3</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>BFT4_PLW <span class="ot">&lt;-</span> PLWBreed<span class="sc">$</span>BFT4</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(BFT3_PLW, BFT4_PLW, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Paired t-test
+
+data:  BFT3_PLW and BFT4_PLW
+t = 32.124, df = 191, p-value &lt; 2.2e-16
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ 0.5797796 0.6556370
+sample estimates:
+mean difference 
+      0.6177083 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>L990Breed <span class="ot">&lt;-</span> Pigs <span class="sc">|&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">filter</span>(Breed <span class="sc">==</span> <span class="st">"L990"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># H0 : Mu 3 = Mu4 </span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># H1 : Mu 3 != Mu4</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>BFT3_L990 <span class="ot">&lt;-</span> L990Breed<span class="sc">$</span>BFT3</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>BFT4_L990 <span class="ot">&lt;-</span> L990Breed<span class="sc">$</span>BFT4</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(BFT3_L990, BFT4_L990, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Paired t-test
+
+data:  BFT3_L990 and BFT4_L990
+t = 37.142, df = 243, p-value &lt; 2.2e-16
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ 0.7009102 0.7794176
+sample estimates:
+mean difference 
+      0.7401639 </code></pre>
+</div>
+</div>
+<p>As we can see we have the same results as the first breed (PL) and in each hypothesis, H0 is rejected in each breed.</p>
+</section>
+</section>
+<section id="task-4" class="level1">
+<h1>Task 4</h1>
+<p><strong>Task 3 (page 59):</strong></p>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3"><strong>Question:</strong></h2>
+<p>Farmers around the world have been asked about their opinion on GMO. Is there any dependency between opinion and geography?</p>
+<p>we have the table on booklet but first we need to transfer it to r :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>Favour <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">24</span>,<span class="dv">40</span>,<span class="dv">16</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>Dont_Favour <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">27</span>,<span class="dv">45</span>,<span class="dv">18</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>Undecided <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">9</span>,<span class="dv">15</span>,<span class="dv">6</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>opinions_table <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(Favour, Dont_Favour, Undecided, <span class="at">row.names =</span> <span class="fu">c</span>(<span class="st">"Americas"</span>, <span class="st">"Europe"</span>, <span class="st">"Asia"</span>))</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>opinions_table</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         Favour Dont_Favour Undecided
+Americas     24          27         9
+Europe       40          45        15
+Asia         16          18         6</code></pre>
+</div>
+</div>
+</section>
+<section id="answer-3" class="level2">
+<h2 class="anchored" data-anchor-id="answer-3"><strong>Answer:</strong></h2>
+<p>First we need to set our hypothesis and choose our test method. In this case it is better to go with a chi-square test of in-dependency so:</p>
+<p>H0 : There is in-dependency between opinion and geography</p>
+<p>H1: There is dependency between opinion and geography</p>
+<p>and now we test our hypothesis:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(opinions_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's Chi-squared test
+
+data:  opinions_table
+X-squared = 0, df = 4, p-value = 1</code></pre>
+</div>
+</div>
+<p><strong>A chi-square test of independence showed that there was no significant association between opinion and geography, X<sup>2</sup>(4, N = 200) = 0, p = 1.</strong></p>
+</section>
+</section>
+<section id="task-5" class="level1">
+<h1>Task 5</h1>
+<p><strong>Task 4 (page 59):</strong></p>
+<section id="question-4" class="level2">
+<h2 class="anchored" data-anchor-id="question-4"><strong>Question:</strong></h2>
+<p>In some local consumer tests, it was shown that the optimal percentage of intramuscular fat (IMF) is between 1-2%. Analyse the data on IMF from the ‘swine-data.txt’ file. Classify pigs into two groups according to optimal and non-optimal IMF. Is there any contingency between this classification and breed? Note, missing observation on IMF is denoted by ‘0’.</p>
+</section>
+<section id="answer-4" class="level2">
+<h2 class="anchored" data-anchor-id="answer-4"><strong>Answer:</strong></h2>
+<p>As we have the data fram already let’s look at it first and see what we have in breeds and IMF:</p>
+<p>1- It seems we should first delete the records in IMF row which has 0 value to prevent their impact in our test since they are missing observations and not the actual measurements:</p>
+<p>we can easilly filter the rows based on !=0 condition.</p>
+<p>2- we want to classify IMF into 2 groups : optimal and non-optimal</p>
+<p>for this purpose we should mutate a new column that has the new classification and we can use case_when function easily to set our conditions.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>Pigs <span class="sc">|&gt;</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Breed,IMF) <span class="sc">|&gt;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(IMF <span class="sc">!=</span> <span class="dv">0</span> ) <span class="sc">|&gt;</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">length</span>(Breed))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  length(Breed)
+1           369</code></pre>
+</div>
+</div>
+<p>So far so good! :) . We have total number of <strong>369</strong> in our table.</p>
+<p>now we want to classify IMF into 2 groups : optimal and non-optimal</p>
+<p>for this purpose we should mutate a new column that has the new classification and we can use case_when function easily to set our conditions:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>Pigs <span class="sc">|&gt;</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Breed,IMF) <span class="sc">|&gt;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(IMF <span class="sc">!=</span> <span class="dv">0</span> ) <span class="sc">|&gt;</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">classification =</span> <span class="fu">case_when</span>(IMF <span class="sc">&gt;=</span> <span class="dv">1</span> <span class="sc">&amp;</span> IMF <span class="sc">&lt;=</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"OP"</span>,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>                                    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"NOP"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Breed  IMF classification
+1   L990 1.14             OP
+2   L990 1.89             OP
+3   L990 1.89             OP
+4    PLW 1.89             OP
+5    PLW 2.22            NOP
+6   L990 1.57             OP
+7   L990 1.17             OP
+8   L990 2.21            NOP
+9   L990 1.28             OP
+10  L990 2.37            NOP</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># based on head(n = 10) we can see first 10 rows to check if we have done the classification correctly.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Perfect!</p>
+<p>3- Now that we have every thing we can built our data frame to conduct the chi-square test of in-dependency but first we should count for OP and NOP and transport data frame to a reasonable format for the test:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>Pigs <span class="sc">|&gt;</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Breed,IMF) <span class="sc">|&gt;</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(IMF <span class="sc">!=</span> <span class="dv">0</span> ) <span class="sc">|&gt;</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">classification =</span> <span class="fu">case_when</span>(IMF <span class="sc">&gt;=</span> <span class="dv">1</span> <span class="sc">&amp;</span> IMF <span class="sc">&lt;=</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"OP"</span>,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>                                    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"NOP"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Breed,classification,<span class="at">name =</span> <span class="st">"numbers"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> classification, <span class="at">values_from =</span> numbers) <span class="sc">|&gt;</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_to_rownames</span>(<span class="st">"Breed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     NOP OP
+L990  61 95
+PL    56 51
+PLW   50 56</code></pre>
+</div>
+</div>
+<p>Now that we have the data frame ready for our chi-square test of in-dependency we call it Breed_Class to conduct the test and here is our hypothesis:</p>
+<p>H0: There is in-dependency between Breed and Classification of IMF (optimal and non-optimal)</p>
+<p>H1: There is dependency between Breed and Classification of IMF</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>Breed_Class <span class="ot">&lt;-</span> Pigs <span class="sc">|&gt;</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Breed,IMF) <span class="sc">|&gt;</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(IMF <span class="sc">!=</span> <span class="dv">0</span> ) <span class="sc">|&gt;</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">classification =</span> <span class="fu">case_when</span>(IMF <span class="sc">&gt;=</span> <span class="dv">1</span> <span class="sc">&amp;</span> IMF <span class="sc">&lt;=</span> <span class="dv">2</span> <span class="sc">~</span> <span class="st">"OP"</span>,</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>                                    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"NOP"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(Breed,classification,<span class="at">name =</span> <span class="st">"numbers"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> classification, <span class="at">values_from =</span> numbers) <span class="sc">|&gt;</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">column_to_rownames</span>(<span class="st">"Breed"</span>)</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(Breed_Class)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's Chi-squared test
+
+data:  Breed_Class
+X-squared = 4.7061, df = 2, p-value = 0.09508</code></pre>
+</div>
+</div>
+<p><strong>A Chi-Square Test of Independence was performed to assess the relationship between IMF classification and Pig Breeds and there was not a significant relationship between the two variables, <em>X<sup>2</sup></em>(2, 369) = 4.71, p = .09.</strong></p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

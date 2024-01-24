@@ -1,0 +1,285 @@
+---
+project:
+  type: website
+  output-dir: docs
+title: "Biostatistics-Tasks (Ali Ranjbaranghaleh)"
+format: html 
+editor: visual
+toc: true
+toc-location: left
+theme: 
+  light: normal
+  dark: darkly
+toc-title: Tasks Number
+---
+
+```{css}
+#| echo: false
+body.quarto-light {
+  background-color: #d8e2dc;
+}
+body.quarto-dark {
+  background-color: #354f52;
+}
+i.bi::before {
+    display: table-caption !important;
+    height: 2rem !important;
+    width: 2rem !important;
+    content: "" !important;
+    background-repeat: no-repeat !important;
+    background-size: 2rem 2rem !important;
+    position: sticky !important;
+    top: 1rem !important;
+}
+
+body.quarto-dark.sidebar nav[role=doc-toc] ul>li>a.active, .sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
+ color: #ccff33 !important;
+}
+```
+
+# Task 1
+
+**Task 2 (page 42):**
+
+## **Question:**
+
+Assessing the efficiency of the new milking robot:
+
+In another scenario, our current knowledge regarding milking duration for a cow indicates that it typically takes about 40 seconds to collect 1 kg of milk from a cow, with a population standard deviation od approximately 5 seconds. A new milking robot has been intriduced on a farm with the aim of speeding up the milking process. Now, we need to determine the sample size required to test the hypothesis that milking efficiency has indeed improved. We want to confirm this when the actual mean time required to collect 1 kg of milk using the new robot is 39 seconds or less. The farmer desires a 90% power of the test and sets the significance level α at 0.05.
+
+## **Answer:**
+
+For simplicity, I write the values first:
+
+mean = 40 (sec)
+
+sd = 5 (sec)
+
+Δ = 1 (sec) (we need to check whether it would be 39 sec or less so delta is 1 sec)
+
+α = 0.05 (5% and it is a one-tailed test)
+
+β = 0.1 (10%)
+
+Formula : n = (sd^2^)(Zα+Zβ)^2^/Δ^2^
+
+```{r}
+((5^2) * ((qnorm(0.05)+qnorm(0.1))^2)) / (1^2)
+```
+
+So in this case we need **214 samples** to conduct the test to be sure that milking efficiency has been improved.
+
+# Task 2
+
+**Task 2 (page 46):**
+
+## **Question:**
+
+Determine the sample size for a two-sided test to detect a difference in the mean carcass length between two pig breeds of 0.5 cm or more with a desired power of 99.9%. Utilize the data in the file "swine-data.txt" to estimate the variance of the trait (column CarcassL).
+
+First we should import our data and library "tidyverse" for maniplulation of data frame because we should filter only **2 pig breeds** which we have 3 by default.
+
+```{r}
+library(tidyverse)
+Pigs = read.table("http://merlin.up.poznan.pl/~mcszyd/dyda/Experimental-Design/swine-data.txt", header=TRUE)
+```
+
+## **Answer:**
+
+As we create our new data sets called Pigs_2breeds which has only Breeds PL and PLW, we should now since it is going to be two-sided test the qnorm we use this time in the formula should be α/2 so we must use qnorm(0.025). Moreover we are planning for independent samples (+ two-sided test) so we have a multiplication by 2 at the first section of our formula:
+
+mean = MCL
+
+sd = SCL
+
+Δ = 0.5 (cm) (we need to check whether it would be 39 sec or less so delta is 1 sec)
+
+α = 0.05 (5% and it is a one-tailed test) -\> α/2 = 0.025
+
+β = 0.001 (0.1%)
+
+Formula : n = 2\*(sd^2^)(Zα/2+Zβ)^2^/Δ^2^
+
+```{r}
+Pigs_2breeds <- Pigs |> 
+  filter(Breed == "PL" | Breed == "PLW")
+Pigs_2breeds$CarcassL -> CL
+mean(CL) -> MCL
+sd(CL) -> SCL
+qnorm(0.025)  -> Z1
+qnorm(0.001) -> Z2
+n <- (2*(SCL^2) * ((Z1+Z2)^2))/(0.5)^2
+n
+
+```
+
+To conduct the test with the situation asked in the question we need **652 pigs for each breed** (652 for PL breed and 652 for PLW breed).
+
+# Task 3
+
+**Task 4 (page 46):**
+
+## **Question:**
+
+Utilize the data in the file 'swine-data.txt' to test the research hypothesis that the mean back fat thickness at sacrum point I is different from the mean back fat thickness at sacrum point II (columns BFT3 and BFT4, respectively).
+
+## **Answer:**
+
+We have the data frame in name of pigs here and we filter PL each breed and test our hypothesis in each breed. here is our main hypothesis:
+
+H0 : mean back fat thickness at BFT3 and BFT4 are equal (mean(BFT3)=mean(BFT4))
+
+H1: mean(BFT3) != mean(BFT4) (are not equal)
+
+we use t.test to test our hypothesis and since we have measurements of back fat thickness of same individual pig but at different site (T3-T4) at the table we are doing a paired test:
+
+```{r}
+PLBreed <- Pigs |>
+   filter(Breed == "PL")
+# H0 : Mu 3 = Mu4 
+# H1 : Mu 3 != Mu4
+BFT3 <- PLBreed$BFT3
+BFT4 <- PLBreed$BFT4
+t.test(BFT3, BFT4, paired = TRUE)
+```
+
+**In PL breed the difference in back fat thickness in T3 and T4 is highly statistically significant, t(242) = 33.267, p \< .01.**
+
+(it means we reject H0 and we assume H1 is correct)
+
+Now we do it for other breeds of pigs:
+
+```{r}
+PLWBreed <- Pigs |>
+   filter(Breed == "PLW")
+# H0 : Mu 3 = Mu4 
+# H1 : Mu 3 != Mu4
+BFT3_PLW <- PLWBreed$BFT3
+BFT4_PLW <- PLWBreed$BFT4
+t.test(BFT3_PLW, BFT4_PLW, paired = TRUE)
+```
+
+```{r}
+L990Breed <- Pigs |>
+   filter(Breed == "L990")
+# H0 : Mu 3 = Mu4 
+# H1 : Mu 3 != Mu4
+BFT3_L990 <- L990Breed$BFT3
+BFT4_L990 <- L990Breed$BFT4
+t.test(BFT3_L990, BFT4_L990, paired = TRUE)
+```
+
+As we can see we have the same results as the first breed (PL) and in each hypothesis, H0 is rejected in each breed.
+
+# Task 4
+
+**Task 3 (page 59):**
+
+## **Question:**
+
+Farmers around the world have been asked about their opinion on GMO. Is there any dependency between opinion and geography?
+
+we have the table on booklet but first we need to transfer it to r :
+
+```{r}
+Favour <- c(24,40,16)
+Dont_Favour <- c(27,45,18)
+Undecided <- c(9,15,6)
+opinions_table <- data.frame(Favour, Dont_Favour, Undecided, row.names = c("Americas", "Europe", "Asia"))
+opinions_table
+```
+
+## **Answer:**
+
+First we need to set our hypothesis and choose our test method. In this case it is better to go with a chi-square test of in-dependency so:
+
+H0 : There is in-dependency between opinion and geography
+
+H1: There is dependency between opinion and geography
+
+and now we test our hypothesis:
+
+```{r}
+chisq.test(opinions_table)
+```
+
+**A chi-square test of independence showed that there was no significant association between opinion and geography, X^2^(4, N = 200) = 0, p = 1.**
+
+# Task 5
+
+**Task 4 (page 59):**
+
+## **Question:**
+
+In some local consumer tests, it was shown that the optimal percentage of intramuscular fat (IMF) is between 1-2%. Analyse the data on IMF from the 'swine-data.txt' file. Classify pigs into two groups according to optimal and non-optimal IMF. Is there any contingency between this classification and breed? Note, missing observation on IMF is denoted by '0'.
+
+## **Answer:**
+
+As we have the data fram already let's look at it first and see what we have in breeds and IMF:
+
+1- It seems we should first delete the records in IMF row which has 0 value to prevent their impact in our test since they are missing observations and not the actual measurements:
+
+we can easilly filter the rows based on !=0 condition.
+
+2- we want to classify IMF into 2 groups : optimal and non-optimal
+
+for this purpose we should mutate a new column that has the new classification and we can use case_when function easily to set our conditions.
+
+```{r}
+Pigs |>
+  select(Breed,IMF) |>
+  filter(IMF != 0 ) |>
+  summarise(length(Breed))
+```
+
+So far so good! :) . We have total number of **369** in our table.
+
+now we want to classify IMF into 2 groups : optimal and non-optimal
+
+for this purpose we should mutate a new column that has the new classification and we can use case_when function easily to set our conditions:
+
+```{r}
+Pigs |>
+  select(Breed,IMF) |>
+  filter(IMF != 0 ) |>
+  mutate(classification = case_when(IMF >= 1 & IMF <= 2 ~ "OP",
+                                    TRUE ~ "NOP")) |>
+  head(n = 10)
+# based on head(n = 10) we can see first 10 rows to check if we have done the classification correctly.
+```
+
+Perfect!
+
+3- Now that we have every thing we can built our data frame to conduct the chi-square test of in-dependency but first we should count for OP and NOP and transport data frame to a reasonable format for the test:
+
+```{r}
+Pigs |>
+  select(Breed,IMF) |>
+  filter(IMF != 0 ) |>
+  mutate(classification = case_when(IMF >= 1 & IMF <= 2 ~ "OP",
+                                    TRUE ~ "NOP")) |>
+  count(Breed,classification,name = "numbers") |>
+  pivot_wider(names_from = classification, values_from = numbers) |>
+  column_to_rownames("Breed")
+```
+
+Now that we have the data frame ready for our chi-square test of in-dependency we call it Breed_Class to conduct the test and here is our hypothesis:
+
+H0: There is in-dependency between Breed and Classification of IMF (optimal and non-optimal)
+
+H1: There is dependency between Breed and Classification of IMF
+
+```{r}
+Breed_Class <- Pigs |>
+  select(Breed,IMF) |>
+  filter(IMF != 0 ) |>
+  mutate(classification = case_when(IMF >= 1 & IMF <= 2 ~ "OP",
+                                    TRUE ~ "NOP")) |>
+  count(Breed,classification,name = "numbers") |>
+  pivot_wider(names_from = classification, values_from = numbers) |>
+  column_to_rownames("Breed")
+chisq.test(Breed_Class)
+
+```
+
+**A Chi-Square Test of Independence was performed to assess the relationship between IMF classification and Pig Breeds and there was not a significant relationship between the two variables, *X^2^*(2, 369) = 4.71, p = .09.**
